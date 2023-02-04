@@ -44,15 +44,20 @@ loop. It should support the following requirements.
 
 ```
 #!/bin/bash
+
 # GETTING USER INPUT
 read -p "Enter a number to display its table " num
+
 # CHECKING THAT THE NUMBER IS VALID OR NOT
 if ! [[ $num =~ ^[0-9]+ ]]
 then
    echo "Enter a valid number"
-exit 1 fi
+exit 1 
+fi
+
 # VARIABLE TO BE MULTIPLIED BY USER INPUT
 multiplier=1
+
 # LOOP TO PRINT THE TABLE
 while [[ $multiplier -lt 11 ]]
 do
@@ -94,15 +99,20 @@ support the following requirement.
 
 ```
 #!/bin/bash
+
 # GETTING USER INPUT
 read -p "Enter a num " num
+
 # CHECKING THAT THE NUMBER IS VALID OR NOT
 if ! [[ $num =~ ^[0-9]+$ ]]
 then
    echo "Enter a valid number"
-exit 1 fi
+exit 1 
+fi
+
 # TO STORE NUMBER OF FACTORS
 no_of_factors=0
+
 # LOOP TO COUNT NUMBER OF FACTORS
 for i in $(eval echo {1..$num})
 do
@@ -110,10 +120,13 @@ do
    then
        ((no_of_factors++))
    fi
+   
    if [[ $no_of_factors > 2 ]]
    then
-break
-fi done
+       break
+   fi 
+done
+
 # PRINTING THE RESULT
 if [[ $no_of_factors = 2 ]]
 then
@@ -153,7 +166,9 @@ command.
 
 ```
 #!/bin/bash
+
 echo ""
+
 # CHECKING IF ASSIGNMENT FOLDER EXISTS OR NOT
 if [[ -d "$(pwd)/Assignment/" ]]
 then
@@ -162,17 +177,21 @@ else
    $(mkdir Assignment)
    echo "Assignment Folder created"
 fi
+
 # CREATING FILE1.TXT INSIDE ASSIGNMENT FOLDER
 $(touch Assignment/File1.txt)
 echo "File1.txt created"
+
 # COPYING CONTENTS OF TABLE.SH TO FILE1.TXT
 $(cat Table.sh > Assignment/File1.txt)
 echo "Contents of Table.sh copied to File1.txt"
+
 # APPENDING "WELCOME TO SIGMOID" IN FILE1.TXT
 echo "" >> Assignment/File1.txt
 echo "Welcome to Sigmoid" >> Assignment/File1.txt
 echo ""
 echo "Contents of desktop folder are:"
+
 # PRINTING FILES IN DESKTOP FOLDER
 for file in ~/Desktop/*
 do
@@ -198,21 +217,29 @@ arr=(2 3 4 1 6 7)
 
 ```
 #!/bin/bash
+
 arr=(2 3 4 1 6 7)
+
 # PRINTING LENGTH OF ARRAY
 echo "Length of array: ${#arr[@]}"
+
 maxi=arr[0]
 mini=arr[0]
+
 # GETTING MAXIMUM AND MINIMUM
 for i in ${arr[@]}
 do
    if [[ $i -gt $maxi ]]
    then
-maxi=$i fi
+       maxi=$i 
+   fi
+   
    if [[ $i -lt $mini ]]
    then
-mini=$i fi
+       mini=$i 
+   fi
 done
+
 # PRINTING MAXIMUM AND MINIMUM VALUES
 echo "Maximum element: $maxi"
 echo "Minimum element: $mini"
