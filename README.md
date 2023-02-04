@@ -26,3 +26,14 @@ current working directory.
  # Prints the current working directory
  echo "Current Current working directory: $(pwd)"
 ```
+
+Output:
+
+```
+Current Date: 04-02-23
+Current Time: 01:03:22 PM
+Current Username: ashishchouhan
+Current home directory: /Users/ashishchouhan
+Current Current working directory: /Users/ashishchouhan/Practice/SHELL_SCRIPTING/Command-line-assignment
+```
+
