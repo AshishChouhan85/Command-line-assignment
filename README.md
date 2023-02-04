@@ -3,7 +3,7 @@
 1. Write a bash script to get the current date, time, username, home directory and
 current working directory.
 
-```
+```sh
 #!/bin/bash
 
 
@@ -42,7 +42,7 @@ loop. It should support the following requirements.
 • The script should accept the input from the command line.
 • If you don't input any data, then display an error message to execute the script correctly.
 
-```
+```sh
 #!/bin/bash
 
 # GETTING USER INPUT
@@ -97,7 +97,7 @@ Enter a valid number
 support the following requirement.
 • The script should accept the input from the User.
 
-```
+```sh
 #!/bin/bash
 
 # GETTING USER INPUT
@@ -164,7 +164,7 @@ command.
 ○ Append the text Welcome to Sigmoid' to the 'File 1.txt' file.
 ○ List all the directories and files present inside Desktop Folder.
 
-```
+```sh
 #!/bin/bash
 
 echo ""
@@ -215,7 +215,7 @@ Mirror_Image_File3.txt
 5. You have given an array. Using Bash script, print its length, maximum element and minimum element.
 arr=(2 3 4 1 6 7)
 
-```
+```sh
 #!/bin/bash
 
 arr=(2 3 4 1 6 7)
