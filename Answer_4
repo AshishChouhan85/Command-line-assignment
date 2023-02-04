@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo ""
+
+# CHECKING IF ASSIGNMENT FOLDER EXISTS OR NOT
+if [[ -d "$(pwd)/Assignment/" ]]
+then
+    echo "Folder already exists"
+else
+    $(mkdir Assignment)
+    echo "Assignment Folder created"
+fi
+
+# CREATING FILE1.TXT INSIDE ASSIGNMENT FOLDER
+$(touch Assignment/File1.txt)
+echo "File1.txt created"
+
+# COPYING CONTENTS OF TABLE.SH TO FILE1.TXT
+$(cat Table.sh > Assignment/File1.txt)
+echo "Contents of Table.sh copied to File1.txt"
+
+# APPENDING "WELCOME TO SIGMOID" IN FILE1.TXT
+echo "" >> Assignment/File1.txt
+echo "Welcome to Sigmoid" >> Assignment/File1.txt
+
+echo ""
+echo "Contents of desktop folder are:" 
+
+# PRINTING FILES IN DESKTOP FOLDER
+for file in ~/Desktop/*
+do
+    echo $(basename $file)
+done
+
+echo ""
+

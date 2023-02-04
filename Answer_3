@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# GETTING USER INPUT
+read -p "Enter a num " num
+
+# CHECKING THAT THE NUMBER IS VALID OR NOT
+if ! [[ $num =~ ^[0-9]+$ ]]
+then
+    echo "Enter a valid number"
+    exit 1
+fi
+
+# TO STORE NUMBER OF FACTORS
+no_of_factors=0
+
+# LOOP TO COUNT NUMBER OF FACTORS
+for i in $(eval echo {1..$num})
+do
+    if [[ $(($num%$i)) = 0 ]]
+    then
+        ((no_of_factors++))
+    fi
+
+    if [[ $no_of_factors > 2 ]]
+    then
+        break
+    fi
+done
+
+# PRINTING THE RESULT
+if [[ $no_of_factors = 2 ]]
+then
+    echo "$num is a prime number"
+else
+    echo "$num is not a prime number"
+fi

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+arr=(2 3 4 1 6 7)
+
+# PRINTING LENGTH OF ARRAY
+echo "Length of array: ${#arr[@]}"
+
+maxi=arr[0]
+mini=arr[0]
+
+# GETTING MAXIMUM AND MINIMUM
+for i in ${arr[@]}
+do
+    if [[ $i -gt $maxi ]]
+    then 
+        maxi=$i
+    fi
+
+    if [[ $i -lt $mini ]]
+    then
+        mini=$i
+    fi
+done
+
+# PRINTING MAXIMUM AND MINIMUM VALUES
+echo "Maximum element: $maxi"
+echo "Minimum element: $mini" 
+
