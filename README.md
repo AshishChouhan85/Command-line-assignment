@@ -3,7 +3,7 @@
 1. Write a bash script to get the current date, time, username, home directory and
 current working directory.
 
-'''
+```
 #!/bin/bash
 
 
@@ -25,4 +25,4 @@ current working directory.
 
  # Prints the current working directory
  echo "Current Current working directory: $(pwd)"
-,,,
+```
