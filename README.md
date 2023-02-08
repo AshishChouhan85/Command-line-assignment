@@ -108,6 +108,9 @@ then
     exit 1
 fi
 
+# FUNCTION TO CHECK PRIME NUMBER
+function isPrime() {
+
 # TO STORE NUMBER OF FACTORS
 no_of_factors=0
 
@@ -139,6 +142,12 @@ then
 else
     echo "$num is not a prime number"
 fi
+
+}
+
+# CALLING THE FUNCTION WITH THE ARGUMENT
+isPrime $num
+
 
 ```
 
