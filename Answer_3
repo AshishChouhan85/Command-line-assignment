@@ -13,12 +13,19 @@ fi
 # TO STORE NUMBER OF FACTORS
 no_of_factors=0
 
+end=$(echo "sqrt($num)" | bc)
+
 # LOOP TO COUNT NUMBER OF FACTORS
-for i in $(eval echo {1..$num})
+for i in $(eval echo {1..$end})
 do
     if [[ $(($num%$i)) = 0 ]]
     then
-        ((no_of_factors++))
+        if [[ $(($num/$i)) = $i ]]
+        then
+            ((no_of_factors++))
+        else
+            ((no_of_factors+=2))
+        fi
     fi
 
     if [[ $no_of_factors > 2 ]]
