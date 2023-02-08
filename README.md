@@ -104,34 +104,42 @@ read -p "Enter a num " num
 # CHECKING THAT THE NUMBER IS VALID OR NOT
 if ! [[ $num =~ ^[0-9]+$ ]]
 then
-   echo "Enter a valid number"
-exit 1 
+    echo "Enter a valid number"
+    exit 1
 fi
 
 # TO STORE NUMBER OF FACTORS
 no_of_factors=0
 
+end=$(echo "sqrt($num)" | bc)
+
 # LOOP TO COUNT NUMBER OF FACTORS
-for i in $(eval echo {1..$num})
+for i in $(eval echo {1..$end})
 do
-   if [[ $(($num%$i)) = 0 ]]
-   then
-       ((no_of_factors++))
-   fi
-   
-   if [[ $no_of_factors > 2 ]]
-   then
-       break
-   fi 
+    if [[ $(($num%$i)) = 0 ]]
+    then
+        if [[ $(($num/$i)) = $i ]]
+        then
+            ((no_of_factors++))
+        else
+            ((no_of_factors+=2))
+        fi
+    fi
+
+    if [[ $no_of_factors > 2 ]]
+    then
+        break
+    fi
 done
 
 # PRINTING THE RESULT
 if [[ $no_of_factors = 2 ]]
 then
-   echo "$num is a prime number"
+    echo "$num is a prime number"
 else
-   echo "$num is not a prime number"
+    echo "$num is not a prime number"
 fi
+
 ```
 
 Output:
