@@ -61,6 +61,7 @@ multiplier=1
 # LOOP TO PRINT THE TABLE
 while [[ $multiplier -lt 11 ]]
 do
+   echo "$num X $multiplier = $(($num*$multiplier))"
    ((multiplier++))
 done
 ```
