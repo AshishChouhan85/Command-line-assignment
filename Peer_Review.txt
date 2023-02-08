@@ -1,1 +1,68 @@
+Aswat's code:
 
+Question 1:
+  1. He used "date +'%m/%d/%Y'" to get current date.
+  2. He used "date +%r" to get current time.
+  3. He used $USER to get username.
+  4. He used $HOME to get path of Home directory.
+  5. He used pwd to get path of current directory.
+  
+Question 2:
+  1. He first stores the first argument in a variable named var.
+  2. Then he checked whether it is empty or not.
+  3. If it was not empty then he ran a loop and printed the table.
+  
+ Question 3:
+  1. He first took a user input to get the number.
+  2. He then made a function to check prime number.
+  3. If the number was less than 0 then he simply printed that number is not a prime number.
+  4. Then he ran a loop till square root of the number and counted number of factors.
+  5. After leaving the loop he checked if the number of factors is equal to 2 then it is a prime number else it is  not.
+  
+Question 4:
+  1. He made a directory using mkdir command.
+  2. Then he created a file inside it using touch command.
+  3. Then he appended the contents of table.sh into this file using >>.
+  4. He then appended "Welcome to Sigmoid" using >>.
+  5. He printed the contents of Desktop simply by doing ls ~/Desktop.
+  
+ Question 5:
+  1. He printed the length of the array using ${#arr[*]}.
+  2. Then he took max as -1 and min as 1000.
+  3. Then he iterated over the entire array and updated max and min.
+  4. After leaving the loop he printed the max and min values.
+  
+  
+Rohit's code:
+
+Question 1:
+  1. He has used date function for date and time with +'%y-%m-%d' for date and +'%r' for time.
+  2. He has used whoami for current user.
+  3. He has used environment variable HOME for getting path of home directory and pwd command to get path of current directory.
+
+Question 2.
+  1. He took input from the command line.
+  2. He then checked whether the argument list is empty or not.
+  3. Then he stored the length of argument list in a variable.
+  4. Then a iterated over the argument list and printed the table of numbers stored in the argument list.
+  
+Question 3.
+  1. He took input form the user.
+  2. He created a function to check prime number.
+  3. If number was negative then he returned.
+  4. If number was equal to 1 then he printed not a prime number.
+  5. Then he ran a loop till square root of the number and counted number of factors.
+  6. After leaving the loop he checked if the number of factors is equal to 2 then it is a prime number else it is  not.
+  
+Question 4.
+  1. He made a directory using mkdir command.
+  2. Then he created a file inside it using touch command.
+  3. Then he appended the contents of table.sh into this file using >>.
+  4. He then appended "Welcome to Sigmoid" using >>.
+  5. He printed the contents of Desktop simply by doing ls ~/Desktop.
+
+Question 5.
+  1. He printed the length of the array using ${#arr[*]}.
+  2. Then he took max as -1 and min as 1000.
+  3. Then he iterated over the entire array and updated max and min.
+  4. After leaving the loop he printed the max and min values.
